@@ -259,24 +259,40 @@ string ex25(string s, int n) {
 
     if(s.size() < 3) {
         for(int i = 0; i < n; ++i) {
+            // cout << s;
             new_s += s;
         }
     } else {
         for(int i = 0; i < 3; ++i) {
-            new_s[i] += s[i];
+            new_s += s[i];
         }
         for(int i = 0; i < n; ++i) {
-            cout << new_s;
+            // cout << new_s;
+            new_s += s;
         }
     }
 
     return new_s;
 }
-
-// TODO: check solution for ex25, to lazy and bored and exhausted to find a solution :)
 // time 11:41:20
-// main function
+
+// 26. Write a C++ program to count the string "aa" in a given string and assume "aaa" contains two "aa".
+int ex26(string s) {
+    int count_aa = 0;
+    
+    for(int y = 0; y < s.size() - 1; ++y) {
+        if( (s[y] == 'a') && (s[y+1] == 'a') ) {
+            count_aa++;
+        }
+        // else
+        // if(s.find("aaa")) count_aa++;
+    }
+
+    return count_aa;
+}
+
 int main() {
-    ex25("python", 3);
+    cout << ex26("baakaraaa");
+
     return 0;
 }

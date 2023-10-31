@@ -291,8 +291,115 @@ int ex26(string s) {
     return count_aa;
 }
 
+// 27. Write a C++ program to check if the first appearance of "a" in a given string is immediately followed by another "a".
+int ex27(string s) {
+
+    for(int q = 0; q < s.size(); q++) {
+        if(s[q] == 'a' && s[q+1] == 'a') {
+            return true;
+        } else if(s[q] == 'a' && s[q+1] != 'a') {
+            return false;
+        }
+    }
+    return false;
+}
+
+// 28. Write a C++ program to create another string made of every other character starting with the first from a given string.
+string ex28(string str) {
+    string new_str;
+
+    for(int q = 0; q < str.size(); q++) {
+        if(q % 2 == 0) {
+            new_str += str[q];
+        }
+    }
+
+    return new_str;
+}
+// 29. Write a C++ program to create a string like "aababcabcd" from a given string "abcd".
+// TODO: check this later
+string ex29(string s) {
+    string result = "";
+
+    for(int i = 0; i < s.length(); i++) {
+        for(int j = 0; j <= i; j++) {
+            result += s[j];
+        }
+        if(i != s.length()-1) {
+            result += s[i+1];
+        }
+    }
+
+    return result;
+}
+// 30. Write a C++ program to count the number of times a substring of length 2 appears in a given string as well as its last two characters. Do not count the end substring.
+int ex30(string s) {
+    string find = "";
+    int count = 0;
+    find += s[s.length() - 2];
+    find += s[s.length() - 1];
+
+    // cout << s.substr(0, 2);
+
+    if(s.substr(0, 2) == find) {
+        for(int i = 0; i < s.size(); ++i) {
+            if(s.substr(i, i+1) == find) {
+                count++;
+            }
+        }
+    } else {
+        return 0;
+    }
+
+    return count;
+}
+// 31. Write a C++ program to check whether the sequence of numbers 1, 2, 3 appears in a given array of integers somewhere.
+// TODO: when network will come back, check your idea using temp = {0, 0, 0} and shift ing the numbers:
+// temp = {11, 1, 2} -> {1, 2, 2} -> {2, 2, 6} -> {2, 6, 9} | like a turing machine
+bool ex31(vector<int> arr) {
+    vector<int> seq = {1, 2, 3};
+    
+    for (int i = 0; i < arr.size(); i++) {
+        if( (arr[i] == seq[0]) && (arr[i+1] == seq[1]) && (arr[i+2] == seq[2]) )
+            return true;
+    }
+    return false; 
+}
+// 32. Write a C++ program to compare two given strings and return the number of positions where they contain the same length 2 substring.
+
+// 33. Write a C++ program to create a new string from a given string where a specified character is removed except at the beginning and end.
+string ex33(string s, char special) {
+    string new_s;
+    new_s += s[0];
+    for(int i = 1; i < s.size() - 1; ++i) {
+      if(s[i] != special) {
+        new_s += s[i];
+      }
+    }
+    
+    new_s += s[s.size() - 1];
+    return new_s;
+}
+// 34. Write a C++ program to create the string of the characters at indexes 0,1,4,5,8,9 ... from a given string.
+// TODO: check this again pls
+string ex34(string s) {
+    string new_str;
+    
+    for(int i = 0; i < s.size(); i+=4) {
+      new_str += s[i];
+      if(i + 1 < s.size())
+        new_str += s[i+1];
+    }
+    
+    return new_str;
+}
+// 35. Write a C++ program to count the number of 5's next to each other in an array of integers. Count the situation where the second 5 is actually a 6.
+
+
 int main() {
-    cout << ex26("baakaraaa");
+    function
+
+    cout << ex34("Python");
 
     return 0;
 }

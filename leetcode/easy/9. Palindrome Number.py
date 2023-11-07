@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/palindrome-number/description/
+
 def isPalindrome(x):
     l1 = [0] * len(str(x)) # [0, 0, 0]
     find = str(x) # "121"

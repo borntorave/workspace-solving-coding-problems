@@ -34,3 +34,5 @@ Here are some of the sources that I use to find coding problems:
 ## Contact
 
 If you have any questions or feedback about this repo, you can reach me at cristian.viorel@pm.me. You can also follow me to see what I'm up to. Thank you for visiting my repo! 😊
+
+![LeetCode Stats](https://leetcard.jacoblin.cool/kuwapt?theme=dark&font=Inter)

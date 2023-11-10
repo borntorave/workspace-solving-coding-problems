@@ -1,9 +1,9 @@
 nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
 nums = [3, 3];
 var containsDuplicate = function (nums) {
-    //
+    
     // sorting method
-    //
+    
     // nums.sort();
     // for (let i = 0; i < nums.length - 1; i++) {
     //     if (nums[i] == nums[i + 1]) {
@@ -11,9 +11,9 @@ var containsDuplicate = function (nums) {
     //     }
     // }
 
-    //
+    
     // hashmap method
-    //
+    
 
     let hashmap = new Map();
 

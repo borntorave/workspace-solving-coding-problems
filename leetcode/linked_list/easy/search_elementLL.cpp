@@ -22,38 +22,38 @@ void displayLL(Node *p)
     }
 }
 
-void count_data(Node *p)
-{
+int search_element(Node* p, int target) {
     int count = 0;
-    while (p != nullptr)
-    {
-        count++;
-        p = p->next;
+    while(p) {
+        if(p->data == target) {
+            cout << "found at index: "<< count << endl;
+            return p->data;
+        } else {
+            count++;
+            p=p->next;
+        }
     }
-    cout << "Total data in LL: " << count << endl;
-}
+    
+    // optimize search_element (move to front method)
+//    Node *q = nullptr;
+//    while(p!=nullptr){
+//      if(p->data == target) {
+//        q->next = p->next;
+    //    p->next[0] = first // first address of the 1st element LL.
+//        p->next = first;
+    //    first takes the current value of p, before swap.
+//        first = p;
+//        return p;
+//      }
+//      q = p;
+//      p=p->next;
+//    }
 
-void sum_elements(Node *p, int sum)
-{
-    // // loop over the elements
-    // while(p) {
-    //     sum += p->data;
-    //     p=p->next;
-    // }
-
-    // recursive method
-
-    if(p != nullptr) {
-        sum += p->data;
-        sum_elements(p->next, sum);
-    } else {
-      cout << sum << '\n';
-    }
+    return 0;
 }
 
 int main()
 {
-
     int A[] = {3, 5, 7, 10, 15};
 
     Node *head = new Node;
@@ -82,11 +82,8 @@ int main()
     }
 
     Node *p = head;
+    cout << search_element(head, 10);
     // displayLL(head);
-    // count_data(head);
-    int sum = 0;
-    sum_elements(head, sum);
-
 
     return 0;
 }

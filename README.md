@@ -15,8 +15,8 @@ git clone https://github.com/vioo-bkp/workspace-solving-coding-problems.git
 Then you can navigate to the folder of the problem you want to check out, and run the solution file using Python. For example, to run the solution for the LeetCode problem "Two Sum", you can do:
 
 ```bash
-cd leetcode
-python shuffle_the_array.py
+cd leetcode/easy
+python 1470.Shuffle the Array.py
 ```
 
 You can also modify the solution files or add your own solutions to the repo. Feel free to fork this repo and make pull requests if you have any suggestions or improvements.
